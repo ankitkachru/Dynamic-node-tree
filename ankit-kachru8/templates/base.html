@@ -1,0 +1,22 @@
+<form>
+	<h1>Add a Node</hi>
+		<input type="text" name="node">
+		{% if items %}
+			{% for item in items %}
+				<input type="hidden" name="node" value={{item}}>
+			{% endfor %}
+		{% endif %}
+		<button>Add</button>
+
+		{% if items %}
+		<br>
+		<br>
+		<select name="opt">
+			{% for item in items %}
+			<option>{{item}}</option>
+			{% endfor %}
+		</select>
+		{% endif %}
+	</form>
+
+
